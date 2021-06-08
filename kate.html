@@ -1,33 +1,76 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Kate Rules!</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kate Rules!</title>
+    <style>
+      .collapsible {
+        background-color: lightseagreen;
+        color: rgb(17, 37, 37);
+        cursor: pointer;
+        font-weight: normal;
+        font-size: 16px;
+        width: 100%;
+        text-align: left;
+      }
 
-	</head>
+      .active,
+      .collapsible:hover {
+        background-color: aliceblue;
+        color: black;
+        font-weight: bold;
+      }
 
-	<body>
-		<h1>What sits at the bottom of the ocean and jitters?</h1>
+      .content {
+        display: none;
+        overflow: hidden;
+      }
+    </style>
+  </head>
 
-		<p>wait for it</p>
-		<br>
-		<br>
-		<br>
-		<p>are you still waiting?</p>
-		<br>
-		<br>
-		<br>
-		<br>
-		<p>did you guess?</p>
+  <body>
+    <button type="button" class="collapsible" aria-label="joke">
+      <p>I have a joke for you!</p>
+    </button>
+    <div class="content">
+      <h1>
+        What sits at the bottom of the ocean and jitters uncontrollably in fear?
+      </h1>
+      <button type="button" class="collapsible" aria-label="prompts answer">
+        Click for answer...
+      </button>
+      <div class="content">
+        <p>Wait for it...</p>
+        <button type="button" class="collapsible" aria-label="prompts answer">
+          Seriously, click for answer...
+        </button>
+        <div class="content">
+          <p>are you still waiting?</p>
+          <button type="button" class="collapsible" aria-label="prompts answer">
+            No no, for real, click for answer...
+          </button>
+          <div class="content">
+            <p>did you guess it yet?</p>
 
-		<br>
-		<br>
-		<br> 
-		<br>
-		<h3>A NERVOUS WRECK!!</h3>
-		<h5>BWAAAAAAHAHAAHHAHAHAAHAHAAAAAAA!</h5>
-		<p>Wheoooo, so funny.</p>
+            <button
+              type="button"
+              class="collapsible"
+              aria-label="prompts answer"
+            >
+              Okay, enough shenanigans. You really <em>can</em> click for answer
+              now.
+            </button>
+            <div class="content">
+              <h3>A NERVOUS WRECK!!</h3>
+              <h5>BWAAAAAAHAHAAHHAHAHAAHAHAAAAAAA!</h5>
+              <p>Wheoooo, so funny.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	</body>
+    <script src="kate.js"></script>
+  </body>
 </html>
